@@ -55,7 +55,7 @@ header{
 .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;}
 .hero-eyebrow{color:var(--text);font-size:16px;margin-bottom:6px;}
 .hero-name{color:var(--orange);font-size:19px;font-weight:600;margin-bottom:14px;}
-.hero-title{font-size:56px;font-weight:800;line-height:1.08;margin-bottom:22px;}
+.hero-title{font-size:36px;font-weight:800;line-height:1.08;margin-bottom:22px;}
 .hero-title span{display:block;}
 .hero-desc{color:var(--muted);max-width:440px;margin-bottom:32px;font-size:15px;}
 
