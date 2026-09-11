@@ -1,127 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Davit Modebadze &amp; MD | Professor | Health IT specialist </title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Davit Modebadze &amp; MD | Professor | Health IT specialist </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Davit Modebadze</h1>
 
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Testimonials</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+<header>
+  <div class="nav-wrap">
+    <div class="logo">Davit Modebadze</div>
+    <nav class="nav" id="nav">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About Me</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <a href="#contact" class="btn" id="downloadCv">Download CV</a>
+      <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
 
-    <a href="#" class="btn-cv">Download CV</a>
-  </header>
-
-  <section class="hero">
-    <div class="hero-text">
-      <p class="hero-greeting">Hi I am</p>
+<!-- HERO / SLIDER -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <p class="hero-eyebrow">Hi, I am</p>
       <p class="hero-name">Davit Modebadze</p>
-      <h2 class="hero-title">UI &amp; UX<br>Designer</h2>
-      <p class="hero-desc">
-        Lorem ipsum dolor sit amet, consectetur. Tristique amet sed
-        massa nibh lectus netus in. Aliquet donec morbi convallis
-        pretium. Turpis tempus pharetra.
-      </p>
-      <a href="#" class="btn-primary">Hire Me</a>
+      <h1 class="hero-title"><span>UI &amp; UX</span><span>Designer</span></h1>
+      <p class="hero-desc">I design clean, usable digital products — from early wireframes to polished interfaces — helping teams turn ideas into experiences people enjoy using.</p>
+      <a href="#contact" class="btn">Hire Me</a>
     </div>
 
-    <div class="hero-image">
-      <div class="photo-circle"></div>
-      <ul class="socials">
-        <li><a href="#" aria-label="Facebook">FB</a></li>
-        <li><a href="#" aria-label="Twitter">TW</a></li>
-        <li><a href="#" aria-label="Instagram">IG</a></li>
-        <li><a href="#" aria-label="LinkedIn">IN</a></li>
-      </ul>
+    <div>
+      <div class="slider" id="slider">
+        <img src="images/slider-1.jpg" class="active" alt="Robert Garcia portrait 1">
+        <img src="images/slider-2.jpg" alt="Robert Garcia portrait 2">
+        <img src="images/slider-3.jpg" alt="Robert Garcia portrait 3">
+      </div>
+      <div class="slider-dots" id="sliderDots"></div>
+      <div class="socials">
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="about">
-    <div class="about-image">
-      <div class="photo-circle"></div>
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-photo">
+      <img src="images/about.jpg" alt="Robert Garcia">
     </div>
-
-    <div class="about-content">
+    <div>
       <h2>About Me</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur. Tristique amet sed massa
-        nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis
-        tempus pharetra.
-      </p>
+      <p class="desc">I'm a UI/UX designer with 6+ years of experience building interfaces for startups and product teams. I care about clarity, accessibility, and details that make software feel effortless. Outside of client work, I write about design systems and mentor junior designers.</p>
 
       <div class="skill">
-        <span class="skill-label">UX</span>
-        <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
+        <div class="skill-label"><span>UX Design</span><span class="pct">95%</span></div>
+        <div class="bar"><div class="bar-fill" data-value="95"></div></div>
       </div>
       <div class="skill">
-        <span class="skill-label">Website Design</span>
-        <div class="skill-bar"><div class="skill-fill" style="width:96%"></div></div>
+        <div class="skill-label"><span>Website Design</span><span class="pct">90%</span></div>
+        <div class="bar"><div class="bar-fill" data-value="90"></div></div>
       </div>
       <div class="skill">
-        <span class="skill-label">App Design</span>
-        <div class="skill-bar"><div class="skill-fill" style="width:98%"></div></div>
+        <div class="skill-label"><span>App Design</span><span class="pct">85%</span></div>
+        <div class="bar"><div class="bar-fill" data-value="85"></div></div>
       </div>
       <div class="skill">
-        <span class="skill-label">Graphic Design</span>
-        <div class="skill-bar"><div class="skill-fill" style="width:98%"></div></div>
+        <div class="skill-label"><span>Graphic Design</span><span class="pct">80%</span></div>
+        <div class="bar"><div class="bar-fill" data-value="80"></div></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="services">
-    <h2>Services</h2>
-    <p class="section-desc">
-      Lorem ipsum dolor sit amet, consectetur. Tristique amet sed massa nibh lectus
-      netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra.
-    </p>
-
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="sec-head">
+      <span class="tag">What I Offer</span>
+      <h2>Services</h2>
+      <p>A few of the ways I can help bring your product to life.</p>
+    </div>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-icon">🖥️</div>
-        <h3>UI/UX</h3>
-        <p>Lorem ipsum dolor sit amet. Consectetur adipiscing elit diam nisl
-        nam diam interdum.</p>
+        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+        <h3>Website Design</h3>
+        <p>Custom, responsive websites designed around your content and your users' goals.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🌐</div>
-        <h3>Web Design</h3>
-        <p>Lorem ipsum dolor sit amet. Consectetur adipiscing elit diam nisl
-        nam diam interdum.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📱</div>
+        <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
         <h3>App Design</h3>
-        <p>Lorem ipsum dolor sit amet. Consectetur adipiscing elit diam nisl
-        nam diam interdum.</p>
+        <p>Native and cross-platform app interfaces, from onboarding flows to full design systems.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🖼️</div>
-        <h3>Graphic Design</h3>
-        <p>Lorem ipsum dolor sit amet. Consectetur adipiscing elit diam nisl
-        nam diam interdum.</p>
+        <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <h3>Content Placement</h3>
+        <p>Structuring and organizing content so information is easy to scan and act on.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-vial"></i></div>
+        <h3>Usability Testing</h3>
+        <p>Running quick, focused tests to catch friction before your product ships.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>Ongoing Support</h3>
+        <p>Post-launch design support to iterate as your product and users evolve.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-swatchbook"></i></div>
+        <h3>Design Systems</h3>
+        <p>Reusable components and guidelines that keep your product consistent as it grows.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="projects">
-    <h2>My Projects</h2>
-    <p class="section-desc">
-      Lorem ipsum dolor sit amet. Mollis erat duis aliquam mauris est risus
-      lectus. Phasellus consequat urna tellus.
-    </p>
-  </section>
+<!-- PROJECTS -->
+<section id="projects" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="sec-head">
+      <span class="tag">My Work</span>
+      <h2>Projects</h2>
+      <p>A selection of recent projects across different design disciplines.</p>
+    </div>
 
+    <div class="filters" id="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web Design</button>
+      <button class="filter-btn" data-filter="app">App Design</button>
+      <button class="filter-btn" data-filter="branding">Branding</button>
+      <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+      <div class="project-card" data-category="web">
+        <div class="project-thumb"><img src="images/project-web.jpg" alt="Nova Finance website"></div>
+        <div class="project-body">
+          <span class="project-cat">Web Design</span>
+          <h3>Nova Finance Website</h3>
+          <p>A marketing site and dashboard redesign for a fintech startup.</p>
+        </div>
+      </div>
+      <div class="project-card" data-category="app">
+        <div class="project-thumb"><img src="images/project-app.jpg" alt="Fitly mobile app"></div>
+        <div class="project-body">
+          <span class="project-cat">App Design</span>
+          <h3>Fitly Mobile App</h3>
+          <p>Onboarding and workout tracking flows for a fitness app.</p>
+        </div>
+      </div>
+      <div class="project-card" data-category="branding">
+        <div class="project-thumb"><img src="images/project-branding.jpg" alt="Cedar & Co branding"></div>
+        <div class="project-body">
+          <span class="project-cat">Branding</span>
+          <h3>Cedar & Co Identity</h3>
+          <p>Logo, color system and brand guidelines for a furniture studio.</p>
+        </div>
+      </div>
+      <div class="project-card" data-category="graphic">
+        <div class="project-thumb"><img src="images/project-graphic.jpg" alt="Festival poster set"></div>
+        <div class="project-body">
+          <span class="project-cat">Graphic Design</span>
+          <h3>Summer Festival Posters</h3>
+          <p>A poster and social media asset series for a music festival.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="sec-head">
+      <span class="tag">Client Words</span>
+      <h2>Testimonials</h2>
+      <p>What people I've worked with have to say.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <i class="fa-solid fa-quote-left"></i>
+        <p>Robert took a vague idea and turned it into a product our users actually enjoy. Communication was smooth from start to finish.</p>
+        <div class="test-person">
+          <img src="images/testimonial-1.jpg" alt="Client photo">
+          <div><strong>Elena Ross</strong><span>Product Manager, Novatech</span></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <i class="fa-solid fa-quote-left"></i>
+        <p>The app redesign increased our onboarding completion rate significantly. Great attention to detail throughout.</p>
+        <div class="test-person">
+          <img src="images/testimonial-2.jpg" alt="Client photo">
+          <div><strong>Daniel Kim</strong><span>Founder, Fitly</span></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <i class="fa-solid fa-quote-left"></i>
+        <p>Professional, responsive, and genuinely invested in getting the details right. Would work together again in a heartbeat.</p>
+        <div class="test-person">
+          <img src="images/testimonial-3.jpg" alt="Client photo">
+          <div><strong>Sara Malik</strong><span>Marketing Lead, Cedar & Co</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <h2>Let's Work Together</h2>
+      <p>Have a project in mind or just want to say hi? Send a message and I'll get back to you within a day or two.</p>
+      <div class="contact-item"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><span>hello@robertgarcia.design</span></div></div>
+      <div class="contact-item"><i class="fa-solid fa-phone"></i><div><strong>Phone</strong><span>+1 (555) 012-3456</span></div></div>
+      <div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><strong>Location</strong><span>San Francisco, CA</span></div></div>
+    </div>
+    <form id="contactForm">
+      <div class="form-row">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+      </div>
+      <input type="text" placeholder="Subject">
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn" style="justify-self:start;">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    &copy; 2026 Robert Garcia. Built with care. <a href="#home">Back to top</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
