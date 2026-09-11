@@ -1,0 +1,56 @@
+/* ============================
+   CSS VARIABLES (theme colors)
+   ============================ */
+:root {
+  --bg-dark: #1c1c1c;      /* main page background */
+  --bg-card: #262626;      /* slightly lighter panels, used later */
+  --text-white: #ffffff;
+  --text-gray: #b3b3b3;    /* muted paragraph text */
+  --accent-orange: #ff7a1a;
+  --border-line: #3a3a3a;
+}
+
+/* ============================
+   RESET
+   ============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================
+   BASE PAGE STYLES
+   ============================ */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* A reusable width-limited wrapper we'll use inside each section */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
