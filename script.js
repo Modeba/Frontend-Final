@@ -75,6 +75,31 @@ filterBtns.forEach(btn => {
   });
 });
 
+/* ---------- Testimonial slider (dot navigation) ---------- */
+const testCards = document.querySelectorAll('#testimonialSlider .test-card');
+const testDotsWrap = document.getElementById('testimonialDots');
+let testIndex = 0;
+
+testCards.forEach((_, i) => {
+  const dot = document.createElement('span');
+  if (i === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => goToTestimonial(i));
+  testDotsWrap.appendChild(dot);
+});
+const testDots = testDotsWrap.querySelectorAll('span');
+
+function goToTestimonial(i){
+  testCards[testIndex].classList.remove('active');
+  testDots[testIndex].classList.remove('active');
+  testIndex = i;
+  testCards[testIndex].classList.add('active');
+  testDots[testIndex].classList.add('active');
+}
+
+setInterval(() => {
+  goToTestimonial((testIndex + 1) % testCards.length);
+}, 6000);
+
 /* ---------- Contact form (demo only, no backend) ---------- */
 document.getElementById('contactForm').addEventListener('submit', (e) => {
   e.preventDefault();
