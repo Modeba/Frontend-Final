@@ -1,18 +1,13 @@
-/* ============================
-   CSS VARIABLES (theme colors)
-   ============================ */
+
 :root {
-  --bg-dark: #1c1c1c;      /* main page background */
-  --bg-card: #262626;      /* slightly lighter panels, used later */
+  --bg-dark: #1c1c1c;
+  --bg-card: #262626;
   --text-white: #ffffff;
-  --text-gray: #b3b3b3;    /* muted paragraph text */
+  --text-gray: #b3b3b3;
   --accent-orange: #ff7a1a;
   --border-line: #3a3a3a;
 }
 
-/* ============================
-   RESET
-   ============================ */
 * {
   margin: 0;
   padding: 0;
@@ -23,9 +18,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ============================
-   BASE PAGE STYLES
-   ============================ */
 body {
   font-family: 'Poppins', Arial, sans-serif;
   background-color: var(--bg-dark);
@@ -47,7 +39,6 @@ img {
   display: block;
 }
 
-/* A reusable width-limited wrapper we'll use inside each section */
 .container {
   width: 100%;
   max-width: 1200px;
