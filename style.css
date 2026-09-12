@@ -203,11 +203,11 @@ header{
 .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
 .test-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:30px;}
 .test-card i{color:var(--orange);font-size:22px;margin-bottom:14px;}
-.test-card p{color:var(--muted);font-size:14.5px;margin-bottom:20px;}
+.test-card p{color:white;font-size:14.5px;margin-bottom:20px;}
 .test-person{display:flex;align-items:center;gap:12px;}
 .test-person img{width:44px;height:44px;border-radius:50%;object-fit:cover;}
 .test-person strong{font-size:14.5px;display:block;}
-.test-person span{color:var(--muted);font-size:13px;}
+.test-person span{color:white;font-size:13px;}
 
 /* ===== Contact ===== */
 .contact-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:50px;}
