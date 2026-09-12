@@ -127,7 +127,7 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
       return res.json();
     })
     .then(() => {
-      alert('Thank you for getting in touch! We appreciate you contacting us.');
+      openModal();
       form.reset();
     })
     .catch(() => {
@@ -137,6 +137,26 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
       submitBtn.disabled = false;
       submitBtn.textContent = originalBtnText;
     });
+});
+
+/* ---------- Success modal ---------- */
+const successModal = document.getElementById('successModal');
+const closeModalBtn = document.getElementById('closeModal');
+
+function openModal(){
+  successModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(){
+  successModal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+closeModalBtn.addEventListener('click', closeModal);
+successModal.addEventListener('click', (e) => {
+  if (e.target === successModal) closeModal();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && successModal.classList.contains('open')) closeModal();
 });
 
 /* ---------- Download CV placeholder ---------- */
