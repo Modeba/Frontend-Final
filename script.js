@@ -100,11 +100,43 @@ setInterval(() => {
   goToTestimonial((testIndex + 1) % testCards.length);
 }, 6000);
 
-/* ---------- Contact form (demo only, no backend) ---------- */
+/* ---------- Contact form ---------- */
 document.getElementById('contactForm').addEventListener('submit', (e) => {
   e.preventDefault();
-  alert('Thanks for your message! This is a demo form — no data is sent.');
-  e.target.reset();
+  const form = e.target;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalBtnText = submitBtn.textContent;
+
+  const payload = {
+    name: form.name.value,
+    email: form.email.value,
+    website: form.website.value,
+    message: form.message.value
+  };
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+
+  fetch('https://jsonplaceholder.typicode.com/users', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+    .then(res => {
+      if (!res.ok) throw new Error('Network response was not ok');
+      return res.json();
+    })
+    .then(() => {
+      alert('Thank you for getting in touch! We appreciate you contacting us.');
+      form.reset();
+    })
+    .catch(() => {
+      alert('Something went wrong sending your message. Please try again later.');
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
+    });
 });
 
 /* ---------- Download CV placeholder ---------- */
